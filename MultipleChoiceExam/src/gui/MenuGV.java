@@ -6,6 +6,7 @@
 package gui;
 
 import gui.SubjectManagement;
+import gui.CreateRoom;
 /**
  *
  * @author Nguyen Viet Tien
@@ -61,6 +62,11 @@ public class MenuGV extends javax.swing.JFrame {
 
         jButton9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton9.setText("Tạo phòng thi ");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton6.setText("Quản lý sinh viên ");
@@ -138,10 +144,17 @@ public class MenuGV extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        CreateRoom room = new CreateRoom();
+        room.setVisible(true);
+        setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void OpenView(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
